@@ -24,10 +24,11 @@ function displayBMIResult(bmi) {
         category = 'Obesity';
     }
 
-    result = `BMI: ${bmi.toFixed(1)} - ${category}`;
+    result = `Your BMI is <strong>${bmi.toFixed(1)}</strong>, You are <strong>${category}</strong>`;
     const resultElement = document.querySelector('#result');
-    resultElement.innerText = result;
+    resultElement.innerHTML = result;
     resultElement.style.marginTop = '20px';
+    resultElement.style.marginBottom = '20px';
 }
   
   

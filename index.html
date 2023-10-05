@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script src="script.js"></script>
     <title>BMI Calculator</title>
 </head>
@@ -13,28 +15,27 @@
         <h1>Check your BMI</h1>
         
         <p>Enter your Weight and Height below to check your BMI Results</p>
-        
         <div class="card">
-          <h2><svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-coffee" href="#icon-coffee" /></svg>Weight</h2>
-          <label class="input">
-            <input id="weight" class="input__field" type="text" placeholder=" " />
-            <span class="input__label">60</span>
-          </label>
-        </div>
-        <div class="card">
-            <h2><svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-coffee" href="#icon-coffee" /></svg>Height</h2>
+          <div class="input-group">
+            <h2><box-icon name='dumbbell'></box-icon> Weight</h2>
+            <label class="input">
+              <input id="weight" class="input__field" type="text" placeholder=" " />
+              <span class="input__label">KG</span>
+            </label>
+          </div>
+          <div class="input-group">
+            <h2><box-icon name='body'></box-icon> Height</h2>
             <label class="input">
               <input id="height" class="input__field" type="text" placeholder=" " />
-              <span class="input__label">167</span>
+              <span class="input__label">CM</span>
             </label>
             <div class="button-group">
               <button onclick="calculateBMI()">Calculate BMI</button>
             </div>
           </div>
-
+        </div>
         <div id="result"></div>
+        <p>Formula: \( BMI = \frac{{\text{Weight (kg)}}}{{(\text{Height (cm)})^2}} \)</p>
     </article>
 </body>
 </html>

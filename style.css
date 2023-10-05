@@ -3,6 +3,7 @@
   --color-light: white;
   --color-dark: #212121;
   --color-signal: #fab700;
+  --color-alert: red;
   --color-background: var(--color-light);
   --color-text: var(--color-dark);
   --color-accent: var(--color-signal);
@@ -48,6 +49,13 @@ h1, h2, h3 {
 .card *:first-child {
   margin-top: 0;
 }
+.card h2 {
+  display: flex;
+  align-items: center;
+}
+.card h2 box-icon {
+  margin-right: 0.5rem;
+}
 
 .l-design-width {
   max-width: 400%;
@@ -67,7 +75,6 @@ h1, h2, h3 {
   top: 0;
   padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * .5);
   margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * .5);
-  background: pink;
   white-space: nowrap;
   transform: translate(0, 0);
   transform-origin: 0 0;
@@ -75,6 +82,7 @@ h1, h2, h3 {
   transition: transform 120ms ease-in;
   font-weight: bold;
   line-height: 1.2;
+  color: var(--color-alert);
 }
 .input__field {
   box-sizing: border-box;
@@ -85,6 +93,7 @@ h1, h2, h3 {
   color: currentColor;
   background: transparent;
   border-radius: var(--size-radius);
+  margin-bottom: 20px;
 }
 .input__field:not(:-moz-placeholder-shown) + .input__label {
   transform: translate(0.25rem, -65%) scale(0.8);
@@ -99,6 +108,15 @@ h1, h2, h3 {
   color: var(--color-accent);
 }
 
+.formula {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.formula p {
+  margin: 0;
+}
+
 .button-group {
   margin-top: calc(var(--size-bezel) * 2.5);
 }
@@ -110,19 +128,18 @@ button {
   border: none;
   border-radius: var(--size-radius);
   font-weight: 900;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0.3rem 0.3rem 0 var(--color-shadow, currentColor);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 button:hover {
-    opacity: 80%;
+  transform: scale(1.1);
+  opacity: 90%;
 }  
 
 button + button {
   margin-left: calc(var(--size-bezel) * 2);
-}
-
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.5em;
 }
