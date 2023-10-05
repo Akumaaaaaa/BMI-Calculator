@@ -18,7 +18,7 @@
           <h2><svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-coffee" href="#icon-coffee" /></svg>Weight</h2>
           <label class="input">
-            <input class="input__field" type="text" placeholder=" " />
+            <input id="weight" class="input__field" type="text" placeholder=" " />
             <span class="input__label">60</span>
           </label>
         </div>
@@ -26,13 +26,15 @@
             <h2><svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-coffee" href="#icon-coffee" /></svg>Height</h2>
             <label class="input">
-              <input class="input__field" type="text" placeholder=" " />
+              <input id="height" class="input__field" type="text" placeholder=" " />
               <span class="input__label">167</span>
             </label>
             <div class="button-group">
-              <button>Calculate BMI</button>
+              <button onclick="calculateBMI()">Calculate BMI</button>
             </div>
           </div>
+
+        <div id="result"></div>
     </article>
 </body>
 </html>
