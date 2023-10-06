@@ -5,30 +5,45 @@ function calculateBMI() {
     if (!isNaN(weight) && !isNaN(height) && height > 0) {
       const bmi = weight / (height * height);
       displayBMIResult(bmi);
+
     } else {
-      alert('Please enter valid weight and height.');
-    }
+      Swal.fire({
+        icon: 'error',
+        title: 'Invalid input',
+        text: 'Please enter valid weight and height.',
+      });
+    }    
   }
+
+  function showFormula() {
+    const formulaContainer = document.getElementById('formulaContainer');
+    formulaContainer.classList.toggle('show');
+}
   
 function displayBMIResult(bmi) {
+    const colorSegments = document.querySelectorAll('.colorSegment .arrow');
+    colorSegments.forEach(arrow => arrow.style.display = 'none');
+    
     let result = '';
     let category = '';
 
     if (bmi < 18.5) {
-        category = 'Underweight';
+      category = 'Underweight';
+      document.getElementById('underweight').querySelector('.arrow').style.display = 'inline-block';
     } else if (bmi < 24.9) {
-        category = 'Normal weight';
+      category = 'Normal';
+      document.getElementById('normal').querySelector('.arrow').style.display = 'inline-block';
     } else if (bmi < 29.9) {
-        category = 'Overweight';
+      category = 'Overweight';
+      document.getElementById('overweight').querySelector('.arrow').style.display = 'inline-block';
     } else {
-        category = 'Obesity';
+      category = 'Obesity';
+      document.getElementById('obesity').querySelector('.arrow').style.display = 'inline-block';
     }
 
     result = `Your BMI is <strong>${bmi.toFixed(1)}</strong>, You are <strong>${category}</strong>`;
     const resultElement = document.querySelector('#result');
     resultElement.innerHTML = result;
-    resultElement.style.marginTop = '20px';
+    resultElement.style.marginTop = '40px';
     resultElement.style.marginBottom = '20px';
 }
-  
-  

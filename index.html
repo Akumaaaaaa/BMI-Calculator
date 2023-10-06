@@ -8,34 +8,54 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>BMI Calculator</title>
+    <link rel="icon" type="image/x-icon" href="Assets/calculator.png">
 </head>
 <body>
     <article class="l-design-width">
-        <h1>Check your BMI</h1>
-        
+        <h1>BMI Calculator</h1>
         <p>Enter your Weight and Height below to check your BMI Results</p>
+
         <div class="card">
           <div class="input-group">
-            <h2><box-icon name='dumbbell'></box-icon> Weight</h2>
+            <h2><box-icon name='dumbbell'></box-icon>Weight</h2>
             <label class="input">
-              <input id="weight" class="input__field" type="text" placeholder=" " />
+              <input id="weight" class="input__field" type="number" placeholder=" " />
               <span class="input__label">KG</span>
             </label>
           </div>
           <div class="input-group">
-            <h2><box-icon name='body'></box-icon> Height</h2>
+            <h2><box-icon name='body'></box-icon>Height</h2>
             <label class="input">
-              <input id="height" class="input__field" type="text" placeholder=" " />
+              <input id="height" class="input__field" type="number" placeholder=" " />
               <span class="input__label">CM</span>
             </label>
             <div class="button-group">
               <button onclick="calculateBMI()">Calculate BMI</button>
+              <button onclick="showFormula()">Show Formula</button>
             </div>
           </div>
         </div>
         <div id="result"></div>
-        <p>Formula: \( BMI = \frac{{\text{Weight (kg)}}}{{(\text{Height (cm)})^2}} \)</p>
+        <div id="colorRuler">
+          <div class="colorSegment" id="underweight">
+            <box-icon type="solid" name="up-arrow" class="arrow"></box-icon>
+          </div>
+          <div class="colorSegment" id="normal">
+            <box-icon type="solid" name="up-arrow" class="arrow"></box-icon>
+          </div>
+          <div class="colorSegment" id="overweight">
+            <box-icon type="solid" name="up-arrow" class="arrow"></box-icon>
+          </div>
+          <div class="colorSegment" id="obesity">
+            <box-icon type="solid" name="up-arrow" class="arrow"></box-icon>
+          </div>
+        </div>        
+        
+        <div id="formulaContainer" class="formula">
+          <p id="bmiFormula" class="fade-in-text">Formula: \( BMI = \frac{{\text{Weight (KG)}}}{{(\text{Height (M)})^2}} \)</p>
+        </div>
     </article>
 </body>
 </html>
