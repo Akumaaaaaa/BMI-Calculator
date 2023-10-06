@@ -37,11 +37,11 @@ function displayBMIResult(bmi) {
       category = 'Overweight';
       document.getElementById('overweight').querySelector('.arrow').style.display = 'inline-block';
     } else {
-      category = 'Obesity';
-      document.getElementById('obesity').querySelector('.arrow').style.display = 'inline-block';
+      category = 'Obese';
+      document.getElementById('obese').querySelector('.arrow').style.display = 'inline-block';
     }
 
-    result = `Your BMI is <strong>${bmi.toFixed(1)}</strong>, You are <strong>${category}</strong>`;
+    result = `Your BMI is <strong>${bmi.toFixed(1)}</strong>, which means you are <strong>${category}</strong>`;
     const resultElement = document.querySelector('#result');
     resultElement.innerHTML = result;
     resultElement.style.marginTop = '40px';
