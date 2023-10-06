@@ -5,10 +5,10 @@ This is a simple BMI (Body Mass Index) calculator that allows users to calculate
 
 ## Table of Contents
 
-- [Installation](https://github.com/Akumaaaaaa/BMI-Calculator/new/main?readme=1#installation)
-- [BMI Categories](https://github.com/Akumaaaaaa/BMI-Calculator/new/main?readme=1#bmi-categories)
-- [Formula](https://github.com/Akumaaaaaa/BMI-Calculator/new/main?readme=1#formula)
-- [Screenshots](https://github.com/Akumaaaaaa/BMI-Calculator/new/main?readme=1#screenshots)
+- [Installation](https://github.com/Akumaaaaaa/BMI-Calculator#installation)
+- [BMI Categories](https://github.com/Akumaaaaaa/BMI-Calculator#bmi-categories)
+- [Formula](https://github.com/Akumaaaaaa/BMI-Calculator#formula)
+- [Screenshots](https://github.com/Akumaaaaaa/BMI-Calculator#screenshots)
   
 ## Installation
 To use the BMI calculator, follow these steps:
