@@ -26,10 +26,10 @@ cd bmi-calculator
 ## BMI Categories
 | Categories        | Range       | Hex
 | ----------------- | ----------- |-----------------------------------------------------------------
-| Underweight | < 18.5 | ![#0000FF](https://via.placeholder.com/10/0000FF?text=+) #0000FF |
-| Normal weight | 18.5 – 24.9 | ![#00FF00](https://via.placeholder.com/10/00FF00?text=+) #00FF00 |
-| Overweight | 25 – 29.9 | ![#FAB700](https://via.placeholder.com/10/FAB700?text=+) #FAB700 |
-| Obesity | > 30 | ![#FF0000](https://via.placeholder.com/10/FF0000?text=+) #FF0000 |
+| Underweight | < 18.5 | ![#0000FF](https://placehold.co/150x10/0000FF/0000FF.png) |
+| Normal weight | 18.5 – 24.9 | ![#00FF00](https://placehold.co/150x10/008000/008000.png) |
+| Overweight | 25 – 29.9 | ![#FAB700](https://placehold.co/150x10/FAB700/FAB700.png) |
+| Obesity | > 30 | ![#FF0000](https://placehold.co/150x10/FF0000/FF0000.png) |
 
 ## Formula
 ```math
